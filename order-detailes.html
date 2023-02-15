@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شقران</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+    <!-- intlTelInput -->
+    <link rel="stylesheet" href="./assets/plugins/flag/css/intlTelInput.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- start to loader -->
+    <div class="loader">
+        <img src="assets/imgs/loader.gif" alt="loader">
+    </div>
+
+
+    <!-- Start Navbar -->
+    <nav class="navbar-m main-padding-right">
+        <div class="container">
+            <div class="navbar-content">
+                
+                <h1 class="title">  الطلبات - تفاصيل الطلب </h1>
+
+                <img src="assets/imgs/logo.png" alt="logo" class="logo">
+
+                <div class="left-sec">
+
+                    <!-- notifications -->
+                    <a href="notifications.html">
+                        <img src="assets/imgs/icons/not-n.png" class="not-link" alt="not">
+                    </a>
+                    <!-- Lang -->
+                    <div class="dropdown">
+                        <button type="button" class="head-lang dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="lang">AR</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+    
+                        <!-- DropDown -->
+                        <ul class="dropdown-menu drop-lang">
+                            <a href="#" class="lang-item">AR</a>
+                            <a href="#" class="lang-item">En</a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+
+    <!-- Start Sidebar -->
+    <div class="sidebar-m">
+
+        <div class="logo">
+            <img src="assets/imgs/stor1.png" alt="store img" class="store-img">
+    
+            <div class="store-info">
+                <span class="name">off white</span>
+                <div class="star-text">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+
+        <ul class="links">
+
+            <a href="index.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/home.png" alt="">
+                </div>
+
+                <span class="text">الرئيسية</span>
+            </a>
+
+            <a href="orders.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/orders_icon.png" alt="">
+                </div>
+
+                <span class="text">الطلبات</span>
+            </a>
+
+            <a href="products.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/products.png" alt="">
+                </div>
+
+                <span class="text">المنتجات</span>
+            </a>
+
+            <a href="coupons.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/coupons.png" alt="">
+                </div>
+
+                <span class="text">كوبونات الخصم</span>
+            </a>
+
+            <a href="ads.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/ads.png" alt="">
+                </div>
+
+                <span class="text">الاعلانات</span>
+            </a>
+
+            <a href="financial-accounts.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/bills.png" alt="">
+                </div>
+
+                <span class="text">الحسابات المالية</span>
+            </a>
+
+            <a href="settings.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/settings.png" alt="">
+                </div>
+
+                <span class="text">الاعدادات</span>
+            </a>
+
+            <a href="contact-us.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/call.png" alt="">
+                </div>
+
+                <span class="text">تواصل معنا</span>
+            </a>
+
+            <a href="login.html" class="link red">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/logout.png" alt="">
+                </div>
+
+                <span class="text">تسجيل خروج</span>
+            </a>
+
+        </ul>
+
+    </div>
+    <!-- End Sidebar -->
+
+
+
+    <!-- Start main Section -->
+    <div class="main-sec sec-padding main-padding-right">
+        <div class="container">
+
+            <div class="card-style pt-4 px-6 mb-4">
+
+                <!-- order -->
+                <div class="order-item">
+                    
+                    <div class="row align-items-center">
+                        <div class="col-lg-9">
+                            <div class="left-sec">
+        
+                                <!-- Top -->
+                                <div class="left-item">
+        
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="main-item">
+                                                <span class="main-item-first">رقم الطلب:</span>
+                                                <span class="main-item-secound">1232</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="main-item">
+                                                <span class="main-item-first">طريقة التوصيل:</span>
+                                                <span class="main-item-secound">ذاتي</span>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+
+                                <!-- Bottom -->
+                                <div class="left-item">
+        
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="main-item">
+                                                <span class="main-item-first">تاريخ إرسال الطلب:</span>
+                                                <span class="main-item-secound">25/9/2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="main-item">
+                                                <span class="main-item-first">وقت إرسال الطلب:</span>
+                                                <span class="main-item-secound">10pm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="right-sec d-flex gap-2 flex-wrap">
+                                <!-- <span class="light-span">فى انتظار الموافقة</span> -->
+                                <!-- <span class="light-span">تم الموافقة على الطلب</span> -->
+                                <!-- <span class="light-span">قيد التنفيذ</span> -->
+                                <span class="light-span">قيد التوصيل</span>
+                                <!-- <span class="light-span">تم التسليم</span> -->
+                                
+                                <button type="button" class="sm-btn sm blue2" data-bs-target="#imgModal" data-bs-toggle="modal">
+                                    <img src="assets/imgs/icons/truk2.png" alt="" class="sm-btn-img">
+                                </button>
+    
+                                <button type="button" class="sm-btn sm blue" data-bs-target="#invoiceModal" data-bs-toggle="modal">
+                                    <img src="assets/imgs/icons/white_bills.png" alt="" class="sm-btn-img">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- products -->
+                <div class="product-buy-items">
+
+                    <!-- Item -->
+                    <div class="pro-buy-item py-4">
+
+                        <div class="pro-buy-top">
+
+                            <div class="img">
+
+                                <!-- Star -->
+                                <span class="star">
+                                    4.5
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+
+                                <!-- Type -->
+                                <span class="type-p red">
+                                    <span class="transparent"></span>
+                                    <span class="text">20%</span>
+                                </span>
+
+                                <img src="assets/imgs/product1.png" alt="product img" class="buy-img">
+                            </div>
+
+                            <div class="pro-buy-content">
+
+                                <div class="pro-buy-head">
+                                    <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                    <!-- Number -->
+                                    <span class="sm-btn transparent">2</span>
+                                </div>
+
+                                <div class="pr-old mb-2">
+                                    <span class="old-price">200 ر.س</span>
+                                    <span class="price">150 ر.س</span>
+                                </div>
+
+                                <div class="main-item-first">(اللون: <span>أحمر</span> / المقاس: <span>xl</span> ) </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="pro-buy-down">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                        </p>
+
+                    </div>
+
+                    <!-- Item -->
+                    <div class="pro-buy-item py-4">
+
+                        <div class="pro-buy-top">
+
+                            <div class="img">
+
+                                <!-- Star -->
+                                <span class="star">
+                                    4.5
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+
+                                <!-- Type -->
+                                <span class="type-p red">
+                                    <span class="transparent"></span>
+                                    <span class="text">20%</span>
+                                </span>
+
+                                <img src="assets/imgs/product2.png" alt="product img" class="buy-img">
+                            </div>
+
+                            <div class="pro-buy-content">
+
+                                <div class="pro-buy-head">
+                                    <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                    <!-- Number -->
+                                    <span class="sm-btn transparent">2</span>
+                                </div>
+
+                                <div class="pr-old mb-2">
+                                    <span class="old-price">200 ر.س</span>
+                                    <span class="price">150 ر.س</span>
+                                </div>
+
+                                <div class="main-item-first">(اللون: <span>أحمر</span> / المقاس: <span>xl</span> ) </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="pro-buy-down">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                        </p>
+
+                    </div>
+
+                    <!-- Item -->
+                    <div class="pro-buy-item py-4">
+
+                        <div class="pro-buy-top">
+
+                            <div class="img">
+
+                                <!-- Star -->
+                                <span class="star">
+                                    4.5
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+
+                                <!-- Type -->
+                                <span class="type-p red">
+                                    <span class="transparent"></span>
+                                    <span class="text">20%</span>
+                                </span>
+
+                                <img src="assets/imgs/product1.png" alt="product img" class="buy-img">
+                            </div>
+
+                            <div class="pro-buy-content">
+
+                                <div class="pro-buy-head">
+                                    <h5 class="title">كنزة شتوية مصنوعة من الصوف الناعم</h5>
+                                    <!-- Number -->
+                                    <span class="sm-btn transparent">2</span>
+                                </div>
+
+                                <div class="pr-old mb-2">
+                                    <span class="old-price">200 ر.س</span>
+                                    <span class="price">150 ر.س</span>
+                                </div>
+
+                                <div class="main-item-first">(اللون: <span>أحمر</span> / المقاس: <span>xl</span> ) </div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="pro-buy-down">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-4">
+                
+                <!-- Order summary -->
+                <div class="col-lg-6">
+                    <div class="card-style">
+                        <div class="main-card-title">ملخص الطلب</div>
+                        <div class="card-content">
+
+                            <div class="summary-items">
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة المنتجات</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة التوصيل</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة الضريبة المضافة</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة الخصم</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item">
+                                    <span class="first">قيمة بوليصة الشحن</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                                <div class="summary-item total">
+                                    <span class="first">الإجمالي</span>
+                                    <span class="second">150 ر.س</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6">
+    
+                    <div class="description card-style  mb-3">
+                        <div class="main-card-title">طريقة الدفع</div>
+                        <div class="card-content card-padding">
+
+                            <div class="radio-box radio-imgs">
+                                <span class="label-radio ca-auto ca-blue">
+                                    محفظة , فيزا
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="description card-style mb-3">
+                        <div class="main-card-title">سبب الإرجاع</div>
+                        <div class="card-content card-padding">
+
+                            <p class="desc">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="description card-style mb-3">
+                        <div class="main-card-title">صورة الفاتورة</div>
+                        <div class="card-content card-padding">
+
+                            <img src="assets/imgs/product1.png" alt="invoice" title="فاتورة الارجاع" class="invoice-img">
+
+                        </div>
+                    </div>
+    
+                    <div class="description card-style">
+                        <div class="main-card-title">بيانات العميل </div>
+                        <div class="card-content card-padding">
+
+                            <div class="profile-content">
+                                <img src="assets/imgs/user3.png" alt="profile-photo" class="profile-photo">
+                                <div class="user-info">
+                                    <h5 class="user-name">عاصم محمد</h5>
+                                    <span class="main-item-first">+966 97254426</span>
+                                    <span class="main-item-first">السعودية, الرياض, حي الياسمين</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="cart-buttons-con bg-white card-padding">
+                <div class="container">
+                    <div class="buttons-m lg">
+                        <button type="button" class="main-btn blue lg up">قبول</button>
+                        <!-- <button type="button" class="main-btn blue xl up">بدء تجهيز الطلب</button>
+                        <button type="button" class="main-btn blue lg up">بدء التوصيل</button>
+                        <button type="button" class="main-btn blue lg up">بدء التحرك</button>
+                        <button type="button" class="main-btn blue xl up">تسليم لشركة الشحن</button>
+                        <button type="button" class="main-btn blue lg up">تم التسليم</button>
+                        <button type="button" class="main-btn blue lg up">تم الاستلام</button>
+                        <button type="button" class="main-btn blue xl up">استلام من شركة الشحن</button>
+                        <button type="button" class="main-btn transparent xl">طلب شركة شحن</button> -->
+                        <a href="orders.html" class="main-btn transparent-red lg">رفض</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End main Section -->
+
+
+    <div class="overlay-m"></div>
+
+
+    <!-- Start invoice Modal -->
+    <div class="modal fade " id="invoiceModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content print">
+
+            <div class="modal-body">
+
+                <div class="content w-100">
+                    <div class="head-btns">
+                        <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+        
+                        <button type="button" class="print-modal">
+                            <img src="assets/imgs/icons/print.png" alt="print-icon" class="print-icon">
+                        </button>
+                    </div>
+    
+                    <img src="assets/imgs/logo_black.png" alt="logo" title="logo-black" class="logo-black">
+
+                    <div class="invoice-items">
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>رقم الفاتورة:</span>
+                                        <span>567</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>رقم الطلب:</span>
+                                        <span>567</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>تاريخ ارسال الطلب:</span>
+                                        <span>25/9/2023</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>وقت ارسال الطلب:</span>
+                                        <span>10pm</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>تفاصيل الطلب:</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>اسم المنتج:</span>
+                                        <span>كنزة صوف</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>سعر المنتج</span>
+                                        <span>150 ر.س</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>اسم المنتج:</span>
+                                        <span>كنزة صوف</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>سعر المنتج</span>
+                                        <span>150 ر.س</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>تفاصيل المتجر</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>اسم المتجر:</span>
+                                        <span>اسم المتجر</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-12">
+                                    <div class="text-item">
+                                        <span>رقم السجل التجاري</span>
+                                        <span>1505060</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="invoice-item py-3">
+                            <div class="row gy-3">
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>عدد المنتجات:</span>
+                                        <span>2</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>طريقة الدفع:</span>
+                                        <span>إلكتروني</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>سعر المنتجات:</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>شركة الشحن</span>
+                                        <span>اكسبريس</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>رسوم التوصيل</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>قيمة الخصم</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="text-item">
+                                        <span>السعر الإجمالي:</span>
+                                        <span>160 ر.س</span>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <img src="assets/imgs/code.png" alt="code" title="Qr Code" class="code-img">
+                </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+    <!-- Start invoice Modal -->
+    <div class="modal fade " id="imgModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content print">
+
+            <div class="modal-body">
+
+                <div class="content w-100">
+                    <div class="head-btns mb-3">
+                        <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+        
+                        <button type="button" class="print-modal">
+                            <img src="assets/imgs/icons/print.png" alt="print-icon" class="print-icon">
+                        </button>
+                    </div>
+    
+                    <img src="assets/imgs/product-photo.png" alt="logo" title="logo-black" class="license-img">
+
+                </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+    <!-- Select 2 -->
+    <script src="./assets/plugins/select2/select2.js"></script>
+
+    <!-- Print -->
+    <script>
+        $('.print-modal').on('click', function(){
+            window.print();
+        })
+    </script>
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

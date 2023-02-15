@@ -1,0 +1,141 @@
+.sidebar-m{
+    width: 130px;
+    // width: 260px;
+    height: 100vh;
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    @include dir-left(0);
+    z-index: 5;
+    padding: 14px 20px 0;
+    overflow: hidden;
+    transition: $main-transition;
+
+    @media screen and (max-width:$screen-lg) {
+        transform: translateX(150%);
+    }
+
+    &:hover{
+        width: 260px;
+
+        .links .link .text{
+            opacity: 1;
+        }
+
+        .links{
+            @include dir-padding-left(0 !important);
+        }
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .store-img{
+            width: 95px;
+            height: 68px;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .store-info{
+            flex-shrink: 0;
+            .name{
+                font-size: 18px;
+                font-family: fontDemi;
+                margin-bottom: 6px;
+                display: block;
+            }
+
+            .star-text{
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: $blue2;
+                font-family: fontDemi;
+
+                i{
+                    color: $gold;
+                }
+            }
+        }
+    }
+
+    .links{
+        margin-top: 30px;
+        @include dir-padding-left(25px);
+        transition: $main-transition;
+
+        height: 80vh;
+        overflow-y: auto;
+        overflow-x: clip;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 25px;
+            background-color: transparent;
+        }
+
+        .link{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 15px;
+
+            .side-icon{
+                width: 36px;
+                height: 36px;
+                border-radius: 5px;
+                @include center;
+                transition: $main-transition;
+                flex-shrink: 0;
+
+                img{
+                    max-width: 18px;
+                    max-height: 18px;
+                }
+
+                &:hover{
+                    background-color: $white2;
+                }
+            }
+
+            .text{
+                color: $light5;
+                font-size: 15px;
+                opacity: 0;
+                transition: $main-transition;
+                flex-shrink: 0;
+            }
+
+            &.active, &:hover{
+                .side-icon{
+                    background-color: $white2;
+                }
+
+                .text{
+                    color: $blue2;
+                }
+            }
+
+            &.red{
+                &.active, &:hover{
+                    .side-icon{
+                        background-color: $light3;
+                    }
+    
+                    .text{
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
