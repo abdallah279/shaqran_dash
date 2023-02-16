@@ -270,7 +270,7 @@
                     <div class="card-style height-full">
                         <div class="main-card-title">
                             تقييمات المتجر
-                            <a href="settings.html" class="main-btn transparent">عرض المزيد</a>
+                            <a href="settings.html" data-pass="store-rate" class="main-btn transparent">عرض المزيد</a>
                         </div>
 
                         <div class="rating-items">
@@ -325,7 +325,7 @@
     
                 <div class="col-xl-5">
                     <div class="card-style height-full">
-
+                        <div id="chart" class="mb-3" style="width:350px; height:350px;margin:auto"></div>
                     </div>
                 </div>
     
@@ -458,6 +458,42 @@
     <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
     <!-- Select 2 -->
     <script src="./assets/plugins/select2/select2.js"></script>
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+        $('[data-pass]').on('click', function(){
+            let item = $(this).attr('data-pass')
+            sessionStorage.setItem("activeTab", JSON.stringify(item));
+        })
+    </script>
+
+    <!-- Chart -->
+    <script>
+        var options = {
+            series: [44, 55, 41, 17, 15],
+            chart: {
+                type: 'donut',
+            },
+            legend: {
+                show: false,
+            },
+            responsive: [{
+            breakpoint: 350,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                position: 'bottom'
+                }
+            }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>

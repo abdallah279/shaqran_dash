@@ -34,7 +34,7 @@
         <div class="container">
             <div class="navbar-content">
                 
-                <h1 class="title">تواصل معنا</h1>
+                <h1 class="title">الاعدادات , تغيير رقم الجوال</h1>
 
                 <img src="assets/imgs/logo.png" alt="logo" class="logo">
 
@@ -166,64 +166,48 @@
     <div class="main-sec sec-padding main-padding-right">
         <div class="container">
 
-            <form action="">
+            <!-- Start store-data -->
+            <form action="investigation-code-2.html">
 
-                <div class="card-style card-padding mb-4">
+                <div class="row card-style p-4 mb-4">
+                    <div class="col-lg-8 col-xl-6">
     
-                    <div class="row">
-                        <div class="col-md-6">
-
-                            <div class="input-g">
-                                <label class="main-label">
-                                    عنوان الرسالة
-                                    <span class="label-hint">*</span>
-                                </label>
-                                <div class="main-input">
-                                    <input type="text" class="input-me" placeholder="ادخل عنوان الرسالة">
-                                </div>
+                        <div class="input-g">
+                            <label class="main-label">
+                                كلمة المرور الحالية
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="password" class="input-me" placeholder="ادخل كلمة المرور الحالية">
                             </div>
-        
-                            <div class="input-g">
-                                <label class="main-label">
-                                    نص الرسالة
-                                    <span class="label-hint">*</span>
-                                </label>
-                                <div class="main-input">
-                                    <textarea name="" id="" class="input-me text-area" placeholder="ادخل نص الرسالة"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="input-g img-video">
-                                <label class="main-label">
-                                    الصورة
-                                    <span class="label-hint">*</span>
-                                </label>
-                                <div class="main-input">
-                                    <input type="file" name="" accept="image/*" id="idPhoto1" class="hidden-input img-upload-input">
-                                    <label for="idPhoto1" class="input-me photo-input">
-                                        ارفق الصورة
-                                    </label>
-                                    <i class="fa-regular fa-file main-icon"></i>
-                                </div>
-                                <div class="photo-con"></div>
-                            </div>
-    
                         </div>
-                    </div>
     
+                        <div class="input-g">
+                            <!-- <a href="#"></a> -->
+                            <label class="main-label">
+                                رقم الجوال الجديد
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" id="telephone" class="input-me phone" placeholder="أدخل رقم الجوال الجديد">
+                            </div>
+                        </div>
+                    
+                    </div>
                 </div>
-
 
                 <!-- Buttons -->
                 <div class="cart-buttons-con bg-white card-padding">
                     <div class="container">
                         <div class="buttons-m lg">
-                            <button type="submit" class="main-btn blue lg up">ارسال</button>
+                            <button type="submit" class="main-btn blue lg up">تأكيد</button>
                         </div>
                     </div>
                 </div>
 
             </form>
+            <!-- End store-data -->
+
 
         </div>
     </div>
@@ -231,6 +215,7 @@
 
 
     <div class="overlay-m"></div>
+
 
 
 
@@ -242,99 +227,22 @@
     <script src="./assets/plugins/select2/select2.js"></script>
     <!-- Flat Picker -->
     <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
-    <!-- fancybox -->
-    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- intlTelInput -->
+    <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
 
-    <!-- Upload Img -->
+
+    <!-- intlTelInput -->
     <script>
-        let loginInputs = document.querySelectorAll('.img-upload-input');
-
-        loginInputs.forEach((input) =>{
-            if(input.classList.contains('profile')){
-                let img = input.parentElement.querySelector('.profile-img .img');
-                let imageSrc = img.getAttribute('src');
-                input.onchange = function(){
-    
-                    let reader = new FileReader();
-                    if(input.files[0]){
-                        reader.readAsDataURL(input.files[0]);
-                    } else{
-                        img.setAttribute('src', imageSrc);
-                        img.classList.remove('wid');
-                    }
-    
-                    reader.onload = ()=>{
-    
-                        img.setAttribute('src', reader.result);
-                        img.classList.add('wid');
-    
-                    }
-                }
-            } else{
-                $(".img-upload-input").change(function() {
-                    imgPreview(this);
-                });
-
-                function imgPreview(input) {
-                    var file = input.files[0];
-                    var mixedfile = file['type'].split("/");
-                    var filetype = mixedfile[0];
-
-                    let photoContainer = $(input).parent('.main-input').next('.photo-con');
-
-
-                    if(filetype == "image"){
-                        if(!(input.hasAttribute('multiple'))){
-                            photoContainer.empty();
-                        }
-
-                        for(file of input.files){
-                            let srcImg = URL.createObjectURL(file);
-
-                            let img = `
-                                <div class='hidden-img'>
-                                    <img src='${srcImg}' />
-                                    <a class="fancybox" data-fancybox-group="gallery"  href="${srcImg}"></a>
-                                    <input type='hidden' value='${file.name}' />
-                                    <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
-                                </div>
-                            `;
-
-                            photoContainer.append(img);
-                            $('.fancybox').fancybox({});
-                            $('.remove-img').on('click', function(e){
-                                e.target.closest('.hidden-img').remove();
-                            });
-
-                        }
-
-                    } else if(filetype == "video"){
-
-                        photoContainer.empty();
-
-                        let srcVideo = URL.createObjectURL(input.files[0]);
-
-                        let video = `
-                            <div class='hidden-img'>
-                                <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
-                                <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
-                                <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
-                            </div>
-                        `
-
-                        photoContainer.append(video);
-                        $('.fancybox').fancybox({});
-                        $('.remove-img').on('click', function(e){
-                            e.target.closest('.hidden-img').remove();
-                        });
-
-                    }else{
-                        alert("Invalid file type");
-                    }
-                }
-            }
-        });
+        var input = document.querySelector("#telephone");
+        window.intlTelInput(input,({
+            autoPlaceholder:"ادخل",
+            customPlaceholder:"kggg",
+            initialCountry:'sa',
+            // nationalMode:false,
+            separateDialCode:true,
+        }));
     </script>
+
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>

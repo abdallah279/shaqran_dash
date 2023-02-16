@@ -34,7 +34,7 @@
         <div class="container">
             <div class="navbar-content">
                 
-                <h1 class="title">تواصل معنا</h1>
+                <h1 class="title">المنتجات , تعديل منتج</h1>
 
                 <img src="assets/imgs/logo.png" alt="logo" class="logo">
 
@@ -166,49 +166,221 @@
     <div class="main-sec sec-padding main-padding-right">
         <div class="container">
 
-            <form action="">
+            <form action="product-detailes.html">
 
                 <div class="card-style card-padding mb-4">
     
                     <div class="row">
+
                         <div class="col-md-6">
-
                             <div class="input-g">
                                 <label class="main-label">
-                                    عنوان الرسالة
+                                    الإسم باللغة العربية
                                     <span class="label-hint">*</span>
                                 </label>
                                 <div class="main-input">
-                                    <input type="text" class="input-me" placeholder="ادخل عنوان الرسالة">
+                                    <input type="text" class="input-me" placeholder="ادخل الإسم باللغة العربية">
                                 </div>
                             </div>
-        
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="input-g">
                                 <label class="main-label">
-                                    نص الرسالة
+                                    الإسم باللغة الإنجليزية
                                     <span class="label-hint">*</span>
                                 </label>
                                 <div class="main-input">
-                                    <textarea name="" id="" class="input-me text-area" placeholder="ادخل نص الرسالة"></textarea>
+                                    <input type="text" class="input-me" placeholder="ادخل الإسم باللغة الإنجليزية">
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    القسم الرئيسي
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <select name="" id="" class="select">
+                                        <option value="" selected disabled>اختر القسم الرئيسي</option>
+                                        <option value="">جدة</option>
+                                        <option value="">الرياض</option>
+                                        <option value="">الدمام</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    القسم الفرعي
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <select name="" id="" class="select">
+                                        <option value="" selected disabled>اختر القسم الفرعي</option>
+                                        <option value="">جدة</option>
+                                        <option value="">الرياض</option>
+                                        <option value="">الدمام</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    الماركة
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <select name="" id="" class="select">
+                                        <option value="" selected disabled>اختر الماركة</option>
+                                        <option value="">جدة</option>
+                                        <option value="">الرياض</option>
+                                        <option value="">الدمام</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Photo -->
+                        <div class="col-md-6">
                             <div class="input-g img-video">
                                 <label class="main-label">
-                                    الصورة
+                                    الصور
                                     <span class="label-hint">*</span>
                                 </label>
                                 <div class="main-input">
-                                    <input type="file" name="" accept="image/*" id="idPhoto1" class="hidden-input img-upload-input">
+                                    <input type="file" name="" accept="image/*" id="idPhoto1" multiple class="hidden-input img-upload-input">
                                     <label for="idPhoto1" class="input-me photo-input">
-                                        ارفق الصورة
+                                        ارفق الصور
                                     </label>
                                     <i class="fa-regular fa-file main-icon"></i>
                                 </div>
                                 <div class="photo-con"></div>
                             </div>
-    
                         </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    الوصف باللغة العربية
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <textarea name="" id="" class="input-me text-area" placeholder="ادخل الوصف باللغة العربية"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    الوصف باللغة الإنجليزية
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <textarea name="" id="" class="input-me text-area" placeholder="ادخل الوصف باللغة الإنجليزية"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    السعر قبل الخصم
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" class="input-me" placeholder="ادخل السعر قبل الخصم">
+                                    <span class="main-icon blue">ر.س</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    العدد المتوفر
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" class="input-me" placeholder="ادخل العدد المتوفر">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    (رقم المنتج)sku
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" class="input-me" placeholder="ادخل sku">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    نوع الخصم
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <select name="" id="" class="select discount-type">
+                                        <option value="" selected disabled>اختر نوع الخصم</option>
+                                        <option value="" title="percentage">نسبة</option>
+                                        <option value="" title="valun">قيمة</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 pre-value valun">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    قيمة الخصم
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" class="input-me" placeholder="ادخل قيمة الخصم">
+                                    <span class="main-icon blue">ر.س</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 pre-value percentage">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    نسبة الخصم
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" class="input-me" value="25" placeholder="ادخل نسبة الخصم">
+                                    <span class="main-icon blue">%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 pre-value percentage valun">
+                            <div class="input-g">
+                                <label class="main-label">
+                                    تاريخ إنتهاء الخصم
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="date" class="input-me date" placeholder="ادخل تاريخ إنتهاء الخصم">
+                                    <i class="fa-regular fa-calendar main-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
     
                 </div>
@@ -218,7 +390,8 @@
                 <div class="cart-buttons-con bg-white card-padding">
                     <div class="container">
                         <div class="buttons-m lg">
-                            <button type="submit" class="main-btn blue lg up">ارسال</button>
+                            <button type="submit" class="main-btn blue lg up">حفظ</button>
+                            <a href="product-detailes.html" class="main-btn transparent-red lg">رجوع</a>
                         </div>
                     </div>
                 </div>
@@ -244,6 +417,25 @@
     <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
     <!-- fancybox -->
     <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+
+    <!-- Flat Picker -->
+    <script>
+        flatpickr(".date", {
+            disableMobile: "true",
+            dateFormat: "Y-m-d"
+        });
+    </script>
+
+    <script>
+        $('.pre-value').hide()
+        $('.valun').show()
+        $('.discount-type').on('select2:select', function (e) {
+            var data = e.params.data;
+            $('.pre-value').fadeOut(0)
+            $(`.${data.title}`).fadeIn()
+        });
+    </script>
+
 
     <!-- Upload Img -->
     <script>

@@ -11,6 +11,12 @@
     overflow: hidden;
     transition: $main-transition;
 
+    @media screen and (max-width:$screen-lg2) {
+        &:hover{
+            width: 210px !important;
+        }
+    }
+
     @media screen and (max-width:$screen-lg) {
         transform: translateX(150%);
     }

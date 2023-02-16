@@ -20,8 +20,8 @@ $(".dropdown-menu").click(function(e){
 let isRtl = $('html[lang="ar"]').length > 0;
 
 // Normal Select To
-if($(".select").length > 1)
 $(".select").select2({
   dir: isRtl ? "rtl" : "ltr",
   minimumResultsForSearch: Infinity,
 });
+

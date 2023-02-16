@@ -194,6 +194,11 @@ input:focus {
 .container {
   padding: 0 30px;
 }
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 15px;
+  }
+}
 
 .loader {
   position: fixed;
@@ -1291,6 +1296,14 @@ html[lang=en] .main-padding-right {
 html[lang=ar] .main-padding-right {
   padding-right: 270px;
 }
+@media screen and (max-width: 1200px) {
+  html[lang=en] .main-padding-right {
+    padding-left: 200px !important;
+  }
+  html[lang=ar] .main-padding-right {
+    padding-right: 200px !important;
+  }
+}
 @media screen and (max-width: 992px) {
   html[lang=en] .main-padding-right {
     padding-left: 0px !important;
@@ -1302,6 +1315,10 @@ html[lang=ar] .main-padding-right {
 
 .c-blue {
   color: #1D71B8 !important;
+}
+
+.c-red {
+  color: #EB2222 !important;
 }
 
 .c-black {
@@ -1355,6 +1372,10 @@ html[lang=ar] .main-padding-right {
   .w-md-100 {
     width: 100%;
   }
+}
+
+.fs-13 {
+  font-size: 13px;
 }
 
 .fs-14 {
@@ -1453,6 +1474,19 @@ html[lang=ar] .main-padding-right {
   .flex-3 {
     width: 100%;
   }
+}
+
+.action-btn {
+  font-size: 16px;
+  color: #1D71B8;
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.action-btn.delete-city {
+  color: #EB2222;
 }
 
 .bg-light {
@@ -1587,7 +1621,7 @@ html[lang=ar] .star {
   right: 10px;
 }
 .star i {
-  color: #FCB91D;
+  color: #2ac43f;
 }
 
 .white-type {
@@ -2657,7 +2691,7 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
   border-radius: 50%;
   width: 22px;
   height: 22px;
-  background-color: #FFC107;
+  background-color: #2ac43f;
   transition: all 0.3s ease;
 }
 html[lang=en] .switch-con .switch::after {
@@ -2915,6 +2949,9 @@ html[lang=ar] .remove-img {
 }
 .modal-dialog.lg {
   min-width: 620px;
+}
+.modal-dialog.sm {
+  min-width: 480px;
 }
 @media (max-width: 768px) {
   .modal-dialog {
@@ -3418,6 +3455,11 @@ html[lang=en] .sidebar-m {
 html[lang=ar] .sidebar-m {
   right: 0;
 }
+@media screen and (max-width: 1200px) {
+  .sidebar-m:hover {
+    width: 210px !important;
+  }
+}
 @media screen and (max-width: 992px) {
   .sidebar-m {
     transform: translateX(150%);
@@ -3464,7 +3506,7 @@ html[lang=ar] .sidebar-m:hover .links {
   font-family: fontDemi;
 }
 .sidebar-m .logo .store-info .star-text i {
-  color: #FCB91D;
+  color: #2ac43f;
 }
 .sidebar-m .links {
   margin-top: 30px;
@@ -4918,37 +4960,6 @@ html[lang=ar] .side-links .side-link::after {
   justify-content: center;
 }
 
-.package-input {
-  display: none;
-}
-.package-input:checked + .package {
-  background-color: #F7FAFC;
-  border-color: #F7FAFC;
-}
-
-.package {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.package .package-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 18px;
-}
-.package .package-head .title-m {
-  font-size: 19px;
-  font-family: fontDemi;
-  color: #505050;
-}
-.package .package-content .package-span {
-  font-size: 14px;
-  color: #6c757d;
-}
-.package .package-content .desc {
-  margin-top: 8px;
-}
-
 .order-vert .img-order-con {
   margin: 0 auto 18px;
 }
@@ -5278,7 +5289,7 @@ html[lang=ar] .chat-form .chat-btn {
   }
 }
 .rating-content .icons .color {
-  color: #FCB91D;
+  color: #2ac43f;
 }
 .rating-content .rating-text {
   font-size: 20px;
@@ -5609,7 +5620,7 @@ html[lang=ar] .chat-form .chat-btn {
   color: #202020;
 }
 .profile-content .user-info .user-name .user-star i {
-  color: #FCB91D;
+  color: #2ac43f;
 }
 
 .pro-buy-item {
@@ -6146,4 +6157,45 @@ html[lang=ar] .chat-form .chat-btn {
 .filter-inputs .filter-inp .input-me {
   min-height: 36px;
   width: 185px;
+}
+
+.package-input {
+  display: none;
+}
+.package-input:checked + .package {
+  background-color: #F7FAFC;
+  border-color: #F7FAFC;
+}
+
+.package {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.package .package-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.package .package-head .title-m {
+  font-size: 19px;
+  font-family: fontDemi;
+  color: #505050;
+}
+.package .package-content .packages-span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.package .package-content .package-span {
+  font-size: 14px;
+  color: #6c757d;
+}
+.package .package-content .desc {
+  margin-top: 8px;
+}
+.package.light {
+  background-color: #F7FAFC;
+  border-color: #F7FAFC;
+  cursor: auto;
 }/*# sourceMappingURL=main.css.map */

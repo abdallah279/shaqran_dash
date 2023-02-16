@@ -1273,42 +1273,6 @@
     }
 }
 
-// package-input
-.package-input{
-    display: none;
-    &:checked + .package{
-        background-color: $white2;
-        border-color: $white2
-    }
-}
-
-// package
-.package{
-    transition: $main-transition;
-    cursor: pointer;
-    .package-head{
-        @include between;
-        margin-bottom: 18px;
-
-        .title-m{
-            font-size: 19px;
-            font-family: fontDemi;
-            color: $light2;
-        }
-    }
-
-    .package-content{
-        .package-span{
-            font-size: 14px;
-            color: $light5;
-        }
-
-        .desc{
-            margin-top: 8px;
-        }
-    }
-}
-
 
 // order-vert
 .order-vert{
@@ -2624,5 +2588,53 @@
             min-height: 36px;
             width: 185px;
         }
+    }
+}
+
+// package-input
+.package-input{
+    display: none;
+    &:checked + .package{
+        background-color: $white2;
+        border-color: $white2
+    }
+}
+
+// package
+.package{
+    transition: $main-transition;
+    cursor: pointer;
+    .package-head{
+        @include between;
+        margin-bottom: 18px;
+
+        .title-m{
+            font-size: 19px;
+            font-family: fontDemi;
+            color: $light2;
+        }
+    }
+
+    .package-content{
+        .packages-span{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .package-span{
+            font-size: 14px;
+            color: $light5;
+        }
+
+        .desc{
+            margin-top: 8px;
+        }
+    }
+
+    &.light{
+        background-color: $white2;
+        border-color: $white2;
+        cursor: auto;
     }
 }

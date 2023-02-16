@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شقران</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+    <!-- intlTelInput -->
+    <link rel="stylesheet" href="./assets/plugins/flag/css/intlTelInput.css">
+    <!-- Flat Picker -->
+    <link rel="stylesheet" href="./assets/plugins/FlatPicker/flatpickr.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- start to loader -->
+    <div class="loader">
+        <img src="assets/imgs/loader.gif" alt="loader">
+    </div>
+
+
+    <!-- Start Navbar -->
+    <nav class="navbar-m main-padding-right">
+        <div class="container">
+            <div class="navbar-content">
+                
+                <h1 class="title">الاعدادات</h1>
+
+                <img src="assets/imgs/logo.png" alt="logo" class="logo">
+
+                <div class="left-sec">
+
+                    <!-- notifications -->
+                    <a href="notifications.html">
+                        <img src="assets/imgs/icons/not-n.png" class="not-link" alt="not">
+                    </a>
+                    <!-- Lang -->
+                    <div class="dropdown">
+                        <button type="button" class="head-lang dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="lang">AR</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+    
+                        <!-- DropDown -->
+                        <ul class="dropdown-menu drop-lang">
+                            <a href="#" class="lang-item">AR</a>
+                            <a href="#" class="lang-item">En</a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+
+    <!-- Start Sidebar -->
+    <div class="sidebar-m">
+
+        <div class="logo">
+            <img src="assets/imgs/stor1.png" alt="store img" class="store-img">
+    
+            <div class="store-info">
+                <span class="name">off white</span>
+                <div class="star-text">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+
+        <ul class="links">
+
+            <a href="index.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/home.png" alt="">
+                </div>
+
+                <span class="text">الرئيسية</span>
+            </a>
+
+            <a href="orders.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/orders_icon.png" alt="">
+                </div>
+
+                <span class="text">الطلبات</span>
+            </a>
+
+            <a href="products.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/products.png" alt="">
+                </div>
+
+                <span class="text">المنتجات</span>
+            </a>
+
+            <a href="coupons.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/coupons.png" alt="">
+                </div>
+
+                <span class="text">كوبونات الخصم</span>
+            </a>
+
+            <a href="ads.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/ads.png" alt="">
+                </div>
+
+                <span class="text">الاعلانات</span>
+            </a>
+
+            <a href="financial-accounts.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/bills.png" alt="">
+                </div>
+
+                <span class="text">الحسابات المالية</span>
+            </a>
+
+            <a href="settings.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/settings.png" alt="">
+                </div>
+
+                <span class="text">الاعدادات</span>
+            </a>
+
+            <a href="contact-us.html" class="link">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/call.png" alt="">
+                </div>
+
+                <span class="text">تواصل معنا</span>
+            </a>
+
+            <a href="login.html" class="link red">
+                <div class="side-icon">
+                    <img src="assets/imgs/icons/sidebar/logout.png" alt="">
+                </div>
+
+                <span class="text">تسجيل خروج</span>
+            </a>
+
+        </ul>
+
+    </div>
+    <!-- End Sidebar -->
+
+
+
+    <!-- Start main Section -->
+    <div class="main-sec sec-padding main-padding-right">
+        <div class="container">
+
+            <div class="card-style main-card-title">
+                <!-- Tabs -->
+                <div class="nav nav-pills">
+                    <div class="nav-link nav-link-adv sm active tabs-m" data-show="store-data">بيانات المتجر</div>
+                    <div class="nav-link nav-link-adv sm tabs-m" data-show="store-rate"> تقييمات المتجر</div>
+                    <div class="nav-link nav-link-adv sm tabs-m" data-show="store-package"> باقات المتجر</div>
+                </div>
+
+                <div class="buttons-m tabs-show store-data">
+
+                    <div class="switch-con">
+                        <input type="checkbox" hidden name="" id="switch">
+                        <label for="switch" class="switch"></label>
+                    </div>
+                    
+                    <span class="c-red fs-13">اظهار رقم السجل التجارى</span>
+
+                </div>
+            </div>
+
+            <!-- Start store-data -->
+            <form action="" class="tabs-show store-data overflow-hidden">
+
+                <div class="row card-style p-4 mb-4">
+                    <div class="col-lg-8 col-xl-6">
+
+                        <!-- Photo -->
+                        <div class="input-g">
+                            <div class="user-photo-con">
+                                <div class="user-img">
+                                    <div class="profile-img">
+                                        <img src="assets/imgs/stor1.png" class="img" alt="">
+                                    </div>
+                                    <input type="file" id="profileImg2" accept="image/*" class="hidden-input img-upload-input profile">
+                                    <label for="profileImg2" class="user-camera">
+                                        <img src="assets/imgs/icons/icons8-camera-24.png" alt="">
+                                    </label>
+                                </div>
+    
+                                <span class="user-text">الصورة الشخصية</span>
+                            </div>
+                        </div>
+    
+                        <!-- Name -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الإسم
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل الإسم">
+                                <i class="fa-regular fa-pen-to-square main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Phone -->
+                        <div class="input-g">
+                            <!-- <a href="#"></a> -->
+                            <label class="main-label">
+                                رقم الجوال
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" id="telephone" class="input-me phone" placeholder="أدخل رقم الجوال">
+                            </div>
+                        </div>
+
+                        <div class="input-g">
+                            <a href="change-phone.html" class="action-btn">تغيير رقم الجوال</a>
+                        </div>
+    
+                        <!-- Email -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                البريد الإلكتروني
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="email" class="input-me" placeholder="ادخل البريد الإلكتروني">
+                                <i class="fa-regular fa-pen-to-square main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Country -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الدولة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <select name="" id="" class="select">
+                                    <option value="" selected disabled>اختر الدولة</option>
+                                    <option value="">السعودية</option>
+                                    <option value="">مصر</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- City -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                المدينة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <select name="" id="" class="select">
+                                    <option value="" selected disabled>اختر المدينة</option>
+                                    <option value="">جدة</option>
+                                    <option value="">الرياض</option>
+                                    <option value="">الدمام</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Address -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                العنوان
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input" data-bs-target="#mapModal" data-bs-toggle="modal">
+                                <input type="text" name="address" class="input-me" id="inputMap" placeholder="ادخل العنوان">
+                                <i class="fa-solid fa-location-dot main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Cat -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الأقسام
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <select name="" id="" class="select-multi" multiple>
+                                    <option value="1">الأقسام</option>
+                                    <option value="2">الأقسام</option>
+                                    <option value="3">الأقسام</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                رقم السجل التجاري / رمز وثيقة العمل الحر
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل رقم السجل التجاري / رمز وثيقة العمل الحر">
+                                <i class="fa-regular fa-pen-to-square main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Photo -->
+                        <div class="input-g img-video">
+                            <label class="main-label">
+                                صورة السجل التجاري / وثيقة العمل الحر
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="file" name="" accept="image/*" id="idPhoto1" class="hidden-input img-upload-input">
+                                <label for="idPhoto1" class="input-me photo-input">
+                                    ارفق صورة السجل التجاري / وثيقة العمل الحر
+                                </label>
+                                <i class="fa-regular fa-file main-icon"></i>
+                            </div>
+                            <div class="photo-con"></div>
+                        </div>
+    
+                        <!-- Radio -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                توفر رقم ضريبي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+    
+                                <div class="row">
+        
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio1" id="radioUp" class="input-radio">
+                                            <label for="radioUp" class="label-radio"> متوفر</label>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio1" id="radioDown" class="input-radio">
+                                            <label for="radioDown" class="label-radio">غير متوفر</label>
+                                        </div> 
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                الرقم الضريبي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل الرقم الضريبي">
+                            </div>
+                        </div>
+    
+                        <!-- Photo -->
+                        <div class="input-g img-video">
+                            <label class="main-label">
+                                صورة وثيقة الرقم الضريبي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="file" name="" accept="image/*" id="idPhoto2" class="hidden-input img-upload-input">
+                                <label for="idPhoto2" class="input-me photo-input">
+                                    ارفق صورة وثيقة الرقم الضريبي
+                                </label>
+                                <i class="fa-regular fa-file main-icon"></i>
+                            </div>
+                            <div class="photo-con"></div>
+                        </div>
+    
+                        <!-- Radio -->
+                        <div class="input-g">
+                            <label class="main-label">
+                               طريقة دفع مستحقات الادارة
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+    
+                                <div class="row">
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio2" id="radioBak" class="input-radio">
+                                            <label for="radioBak" class="label-radio">باقات</label>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box" data-bs-target="#notModal" data-bs-toggle="modal">
+                                            <input type="radio" name="radio2" id="radio3om" class="input-radio">
+                                            <label for="radio3om" class="label-radio">عمولة</label>
+                                        </div> 
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <!-- Radio -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                خدمة التوصيل
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+    
+                                <div class="row show-city">
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio3" id="radioAvl" class="input-radio" data-name="show">
+                                            <label for="radioAvl" class="label-radio">ذاتي</label>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-sm-3 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio3" id="radioUnAvl" class="input-radio">
+                                            <label for="radioUnAvl" class="label-radio">شركات شحن</label>
+                                        </div> 
+                                    </div>
+    
+                                    <div class="col-sm-6 col-6">
+                                        <div class="radio-box">
+                                            <input type="radio" name="radio3" id="radioUnAvl2" class="input-radio" data-name="show">
+                                            <label for="radioUnAvl2" class="label-radio">ذاتى مع شركات شحن</label>
+                                        </div> 
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+
+                        <!-- #################### city-container ###################### -->
+
+                        <div class="city-container">
+                            <!-- City -->
+                            <div class="input-g">
+                                <label class="main-label">
+                                    المدينة
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <select name="" id="" class="select">
+                                        <option value="" selected disabled>اختر المدينة</option>
+                                        <option value="">جدة</option>
+                                        <option value="">الرياض</option>
+                                        <option value="">الدمام</option>
+                                    </select>
+                                </div>
+                            </div>
+        
+                            <!-- Number -->
+                            <div class="input-g">
+                                <label class="main-label">
+                                     قيمة التوصيل للمدينة
+                                    <span class="label-hint">*</span>
+                                </label>
+                                <div class="main-input">
+                                    <input type="number" class="input-me" placeholder="ادخل قيمة التوصيل">
+                                    <span class="main-icon blue">ر.س</span>
+                                </div>
+                            </div>
+    
+                            <!-- Btn To Add City -->
+                            <div class="input-g">
+                                <button type="button" class="action-btn add-city">
+                                    اضافة مدينة
+                                </button>
+                            </div>
+    
+                            <div class="inputs-group"></div>
+                        </div>
+
+                        <!-- ####################### city-container ################### -->
+    
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                أقل قيمة للتوصيل المجاني
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل أقل قيمة للتوصيل المجاني">
+                                <span class="main-icon blue">ر.س</span>
+                            </div>
+                        </div>
+    
+                        <!-- Bank Name -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                إسم البنك
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل إسم البنك">
+                                <i class="fa-regular fa-pen-to-square main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Name -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                إسم صاحب الحساب
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="text" class="input-me" placeholder="ادخل إسم صاحب الحساب">
+                                <i class="fa-regular fa-pen-to-square main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                رقم الحساب البنكي
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل رقم الحساب البنكي">
+                                <i class="fa-regular fa-pen-to-square main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Number -->
+                        <div class="input-g">
+                            <label class="main-label">
+                                رقم الايبان
+                                <span class="label-hint">*</span>
+                            </label>
+                            <div class="main-input">
+                                <input type="number" class="input-me" placeholder="ادخل رقم الايبان">
+                                <i class="fa-regular fa-pen-to-square main-icon"></i>
+                            </div>
+                        </div>
+    
+                        <!-- Check Box -->
+                        <div class="input-g">
+                            <div class="check-box form-check-m">
+                                <input type="checkbox" name="" id="mndorsement">
+                                <label class="check" for="mndorsement"></label>
+                                <label class="check-anchor" for="mndorsement">
+                                    إقرار وتعهد بصحة البيانات المدخلة و أي تلاعب سوف يعرضك للمساءلة 
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="cart-buttons-con bg-white card-padding">
+                    <div class="container">
+                        <div class="buttons-m lg">
+                            <button type="button" data-bs-target="#notModal" data-bs-toggle="modal" class="main-btn blue xl up">حفظ</button>
+                            <a href="change-password.html" class="main-btn transparent xl">تغيير كلمة المرور</a>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <!-- End store-data -->
+
+            <!-- Start Rating -->
+            <div class="tabs-show store-rate card-style px-4">
+
+                <div class="rate-item py-3">
+                    <div class="rate-head">
+                        <img src="assets/imgs/user1.png" alt="user-img" class="rate-img">
+                        <div class="user-info">
+                            <span class="rate-name">عبدالله أحمد</span>
+                            <span class="rate-date">25/9/2021</span>
+                        </div>
+                    </div>
+    
+                    <div class="rate-icons">
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+    
+                    <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                    </p>
+                </div>
+    
+                <div class="rate-item py-3">
+                    <div class="rate-head">
+                        <img src="assets/imgs/user2.png" alt="user-img" class="rate-img">
+                        <div class="user-info">
+                            <span class="rate-name">محمد السيد</span>
+                            <span class="rate-date">25/9/2021</span>
+                        </div>
+                    </div>
+    
+                    <div class="rate-icons">
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+    
+                    <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                    </p>
+                </div>
+    
+                <div class="rate-item py-3">
+                    <div class="rate-head">
+                        <img src="assets/imgs/user1.png" alt="user-img" class="rate-img">
+                        <div class="user-info">
+                            <span class="rate-name">عبدالله أحمد</span>
+                            <span class="rate-date">25/9/2021</span>
+                        </div>
+                    </div>
+    
+                    <div class="rate-icons">
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+    
+                    <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                    </p>
+                </div>
+    
+                <div class="rate-item py-3">
+                    <div class="rate-head">
+                        <img src="assets/imgs/user2.png" alt="user-img" class="rate-img">
+                        <div class="user-info">
+                            <span class="rate-name">محمد السيد</span>
+                            <span class="rate-date">25/9/2021</span>
+                        </div>
+                    </div>
+    
+                    <div class="rate-icons">
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+    
+                    <p class="rate-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد هذا النص هو مثال لنص يمكن أن هذا النص هو مثال لنص يمكن 
+                    </p>
+                </div>
+
+            </div>
+            <!-- End Rating -->
+
+            <!-- Start package -->
+            <div class="store-package tabs-show">
+
+                <div class="card-style card-padding">
+
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-8">
+    
+                            <div class="form-style sm package light">
+                                <div class="package-head">
+                                    <h4 class="title-m">باقة شهرية</h4>
+                                    <div class="price lg">150 ر.س</div>
+                                </div>
+                
+                                <div class="package-content">
+                                    <div class="packages-span">
+                                        <div class="package-span">مدة الباقة:  28يوم</div>
+                                        <div class="package-span">تاريخ انتهاء الباقة: 25/9/2023</div>
+                                    </div>
+                                    <p class="desc">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                                        حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة 
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="cart-buttons-con bg-white card-padding mt-4">
+                    <div class="container">
+                        <div class="buttons-m lg">
+                            <a href="new-package.html" class="main-btn blue lg up">تجديد الباقة</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End package -->
+
+        </div>
+    </div>
+    <!-- End main Section -->
+
+
+    <div class="overlay-m"></div>
+
+
+    <!-- Start Map Modal -->
+    <div class="modal fade modal-map" id="mapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="map" style="width:100%;height:400px;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn transparent confirm-btn" data-bs-dismiss="modal">تأكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Start not Modal 2 -->
+    <div class="modal fade" id="notModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-body">
+                <p class="modal-text center">تنبية! لا يمكنك التحويل على نظام العمولة الا بعد انتهاء الباقة المشترك بها</p>
+            </div>
+
+            <div class="modal-footer">
+              <a href="index.html" class="main-btn md blue up">العودة للرئيسية</a>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+    <!-- Select 2 -->
+    <script src="./assets/plugins/select2/select2.js"></script>
+    <!-- Flat Picker -->
+    <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- intlTelInput -->
+    <script src="./assets/plugins/flag/js/intlTelInput.min.js"></script>
+    <!-- Map -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?&libraries=places&key=AIzaSyBNLoYGrbnQI_GMqHt6m0PSN9yA7Zvq7gA"></script>
+
+
+    <!-- intlTelInput -->
+    <script>
+        var input = document.querySelector("#telephone");
+        window.intlTelInput(input,({
+            autoPlaceholder:"ادخل",
+            customPlaceholder:"kggg",
+            initialCountry:'sa',
+            // nationalMode:false,
+            separateDialCode:true,
+        }));
+    </script>
+
+    <!-- Initialize And Add The Map -->
+    <script>
+        function initMap() {
+            var location = { lat: 24.746189966314272, lng: 46.87979429238138 };
+
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: location,
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                draggable: true,
+                title: "اسحب العلامة"
+            });
+
+            let infowindow = [];
+            google.maps.event.addListener(marker, 'dragend', function (evt) {
+
+                const geocoder = new google.maps.Geocoder();
+
+                function geoLatLng(){
+                    geocoder.geocode({location: evt.latLng}).then((res) =>{
+                        let theCountry = res.results[0].formatted_address;
+
+                        let newInfoWindow = new google.maps.InfoWindow({
+                            content: `${theCountry}`
+                        });
+
+                        infowindow.push(newInfoWindow);
+                        for(let i =0; i< infowindow.length; i++){
+                            infowindow[i].close();
+                            infowindow[infowindow.length - 1].open(map, marker);
+                        }
+
+                        let confirmBtn = document.querySelector('.confirm-btn');
+                        confirmBtn.addEventListener('click', ()=>{
+                            document.getElementById('inputMap').value = `${theCountry}`;
+                        });
+                    });
+                }
+
+                geoLatLng();
+            });
+        }
+
+        initMap();
+
+    </script>
+
+    <!-- Flat Picker -->
+    <script>
+        flatpickr(".date", {
+            disableMobile: "true",
+            dateFormat: "Y-m-d"
+        });
+    </script>
+
+    <!-- Show Hide City -->
+    <script>
+        $('.city-container').hide();
+        $('.show-city').on('click', showCity);
+        
+        function showCity(){
+            if($("input:radio[data-name='show']").is(":checked")) {
+                $('.city-container').fadeIn()
+            } else{
+                $('.city-container').fadeOut()
+            }
+        }
+
+        showCity();
+    </script>
+
+
+    <!-- Add City -->
+    <script>
+        $('.add-city').on('click', function(){
+
+            let city = `
+                <div class='city'>
+                    <div class="input-g">
+                        <label class="main-label">
+                            المدينة
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <select name="" id="" class="select">
+                                <option value="" selected disabled>اختر المدينة</option>
+                                <option value="">جدة</option>
+                                <option value="">الرياض</option>
+                                <option value="">الدمام</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-g">
+                        <label class="main-label">
+                                قيمة التوصيل للمدينة
+                            <span class="label-hint">*</span>
+                        </label>
+                        <div class="main-input">
+                            <input type="number" class="input-me" placeholder="ادخل قيمة التوصيل">
+                            <span class="main-icon blue">ر.س</span>
+                        </div>
+                    </div>
+
+                    <div class='input-g'>
+                        <button type='button' class='action-btn delete-city'>
+                            حذف المدينة
+                        </button>
+                    </div>
+                </div>
+                
+            `
+            $('.inputs-group').append(city);
+            $('.inputs-group .city:last-child').hide()
+
+            $('.inputs-group .city:last-child').fadeIn(1000)
+
+            $('.delete-city').on('click', function(){
+                $(this).parents('.city').remove();
+            })
+
+            let isRtl = $('html[lang="ar"]').length > 0;
+
+            // Normal Select To
+            if($(".select").length > 1)
+            $(".select").select2({
+            dir: isRtl ? "rtl" : "ltr",
+            minimumResultsForSearch: Infinity,
+            });
+        })
+    </script>
+
+
+    <!-- Tabs -->
+    <script>
+        $('.tabs-show').css('display', 'none');
+        getProFromLocal();
+
+        $('.tabs-m').on('click', function(e){
+            e.preventDefault();
+
+            // FadeOut All Content
+            $('.tabs-show').fadeOut(0);
+            let item = $(this).attr('data-show');
+
+            // Show Current Content
+            $(`.${item}`).fadeIn();
+
+            // Active Class In Tabs
+            $('.tabs-m').removeClass('active');
+            $(this).addClass('active');
+
+            // Set Item
+            addLocal(item);
+
+            $('.overlay-m').click();
+        });
+
+
+        // Add activeTab To Local storage
+        function addLocal(tab){
+            sessionStorage.setItem("activeTab", JSON.stringify(tab));
+        }
+
+        // Get activeTab From Local Storage
+        function getProFromLocal(){
+            let data = sessionStorage.getItem("activeTab");
+
+            // Check if Theres activeTab In Local Storage
+            if(data){
+                activeTab = JSON.parse(data);
+                $(`.${activeTab}`).fadeIn();
+                $('.tabs-m').removeClass('active')
+                $(`[data-show=${activeTab}]`).addClass('active');
+            } else{
+                $('.store-data').fadeIn(0);
+            }
+        }
+    </script>
+
+
+    <!-- Upload Img -->
+    <script>
+        let loginInputs = document.querySelectorAll('.img-upload-input');
+
+        loginInputs.forEach((input) =>{
+            if(input.classList.contains('profile')){
+                let img = input.parentElement.querySelector('.profile-img .img');
+                let imageSrc = img.getAttribute('src');
+                input.onchange = function(){
+    
+                    let reader = new FileReader();
+                    if(input.files[0]){
+                        reader.readAsDataURL(input.files[0]);
+                    } else{
+                        img.setAttribute('src', imageSrc);
+                        img.classList.remove('wid');
+                    }
+    
+                    reader.onload = ()=>{
+    
+                        img.setAttribute('src', reader.result);
+                        img.classList.add('wid');
+    
+                    }
+                }
+            } else{
+                $(".img-upload-input").change(function() {
+                    imgPreview(this);
+                });
+
+                function imgPreview(input) {
+                    var file = input.files[0];
+                    var mixedfile = file['type'].split("/");
+                    var filetype = mixedfile[0];
+
+                    let photoContainer = $(input).parent('.main-input').next('.photo-con');
+
+
+                    if(filetype == "image"){
+                        if(!(input.hasAttribute('multiple'))){
+                            photoContainer.empty();
+                        }
+
+                        for(file of input.files){
+                            let srcImg = URL.createObjectURL(file);
+
+                            let img = `
+                                <div class='hidden-img'>
+                                    <img src='${srcImg}' />
+                                    <a class="fancybox" data-fancybox-group="gallery"  href="${srcImg}"></a>
+                                    <input type='hidden' value='${file.name}' />
+                                    <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+                            `;
+
+                            photoContainer.append(img);
+                            $('.fancybox').fancybox({});
+                            $('.remove-img').on('click', function(e){
+                                e.target.closest('.hidden-img').remove();
+                            });
+
+                        }
+
+                    } else if(filetype == "video"){
+
+                        photoContainer.empty();
+
+                        let srcVideo = URL.createObjectURL(input.files[0]);
+
+                        let video = `
+                            <div class='hidden-img'>
+                                <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
+                                <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
+                                <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        `
+
+                        photoContainer.append(video);
+                        $('.fancybox').fancybox({});
+                        $('.remove-img').on('click', function(e){
+                            e.target.closest('.hidden-img').remove();
+                        });
+
+                    }else{
+                        alert("Invalid file type");
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Select Multiple -->
+    <script>
+        $(".select-multi").select2({
+            dir: isRtl ? "rtl" : "ltr",
+            placeholder: "اختر الأقسام"
+        });
+    </script>
+</body>
+</html>

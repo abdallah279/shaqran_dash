@@ -1143,6 +1143,10 @@
 .main-padding-right{
   @include dir-padding-left(270px);
 
+  @media screen and (max-width:$screen-lg2) {
+      @include dir-padding-left(200px !important);
+  }
+
   @media screen and (max-width:$screen-lg) {
       @include dir-padding-left(0px !important);
   }
@@ -1151,6 +1155,10 @@
 // Classes
 .c-blue{
   color: $blue2 !important;
+}
+
+.c-red{
+  color: $red !important;
 }
 
 .c-black{
@@ -1204,6 +1212,10 @@
   @media screen and (max-width:$screen-md) {
     width: 100%;
   }
+}
+
+.fs-13{
+  font-size: 13px;
 }
 
 .fs-14{
@@ -1296,6 +1308,20 @@
 
   @media screen and (max-width:$screen-lg) {
     width: 100%;
+  }
+}
+
+.action-btn{
+  font-size: 16px;
+  color: $blue2;
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &.delete-city{
+    color: $red;
   }
 }
 
@@ -2497,7 +2523,7 @@
       transform: translateY(-50%);
       @include dir-left(4px);
       @include circle(22px);
-      background-color: $gold2;
+      background-color: $gold;
       transition: $main-transition;
     }
   }
@@ -2744,6 +2770,10 @@
 
   &.lg{
     min-width: 620px;
+  }
+
+  &.sm{
+    min-width: 480px;
   }
   
   @media (max-width:$screen-md) {

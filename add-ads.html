@@ -213,7 +213,7 @@
 
     <div class="overlay-m"></div>
 
-    <!-- Start Done Modal 2 -->
+    <!-- Start not Modal 2 -->
     <div class="modal fade" id="notModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -272,6 +272,7 @@
                 $(".img-upload-input").change(function() {
                     imgPreview(this);
                 });
+
                 function imgPreview(input) {
                     var file = input.files[0];
                     var mixedfile = file['type'].split("/");
@@ -281,15 +282,18 @@
 
 
                     if(filetype == "image"){
-                        var reader = new FileReader();
-                        reader.onload = function(e){
-
+                        if(!(input.hasAttribute('multiple'))){
                             photoContainer.empty();
+                        }
+
+                        for(file of input.files){
+                            let srcImg = URL.createObjectURL(file);
 
                             let img = `
                                 <div class='hidden-img'>
-                                    <img src='${e.target.result}' />
-                                    <a class="fancybox" data-fancybox-group="gallery" href="${e.target.result}"></a>
+                                    <img src='${srcImg}' />
+                                    <a class="fancybox" data-fancybox-group="gallery"  href="${srcImg}"></a>
+                                    <input type='hidden' value='${file.name}' />
                                     <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
                                 </div>
                             `;
@@ -301,7 +305,6 @@
                             });
 
                         }
-                        reader.readAsDataURL(input.files[0]);
 
                     } else if(filetype == "video"){
 

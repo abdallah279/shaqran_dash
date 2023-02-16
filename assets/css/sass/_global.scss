@@ -168,4 +168,8 @@ input:focus
 
 .container{
     padding: 0 30px;
+
+    @media screen and (max-width:$screen-lg) {
+        padding: 15px;
+    }
 }

@@ -34,7 +34,7 @@
         <div class="container">
             <div class="navbar-content">
                 
-                <h1 class="title">الاشعارات</h1>
+                <h1 class="title">الاعدادات , تغيير رقم الجوال</h1>
 
                 <img src="assets/imgs/logo.png" alt="logo" class="logo">
 
@@ -166,35 +166,38 @@
     <div class="main-sec sec-padding main-padding-right">
         <div class="container">
 
-            <div class="card-style">
-                <div class="main-card-title justify-content-end">
-                    <button type="button" class="main-btn sm2 transparent-red">حذف الإشعارات</button>
-                </div>
+            <div class="row">
+                <div class="col-lg-8 col-xl-6 mx-auto">
 
-                <div class="row p-4">
-                    <div class="col-xl-8">
-    
-                        <div class="notifications">
-            
-                            <a href="product-detailes.html" class="not-item">
-                                <span class="not-text">تم الموافقة على عرض منتجك من قبل الإدارة</span>
-                            </a>
-            
-                            <a href="settings.html" class="not-item">
-                                <span class="not-text">قام عبدالله أحمد بتقييم متجرك</span>
-                            </a>
-            
-                            <a href="order-detailes.html" class="not-item">
-                                <span class="not-text">وصلك طلب جديد</span>
-                            </a>
-            
-                            <a href="settings.html" class="not-item">
-                                <span class="not-text">تم تجديد باقتك بنجاح</span>
-                            </a>
-            
+                    <form action="settings.html" class="form-style card-style">
+
+                        <!-- Form Heading -->
+                        <div class="form-heading">
+                            <h3 class="form-title">كود التحقق من رقمك </h3>
+                            <p class="form-text">
+                                من فضلك قم بإدخال الكود المكون من 6 أرقام الذي تم إرساله إلى 
+                                رقم الجوال الخاص بك 
+                            </p>
                         </div>
-    
-                    </div>
+
+                        <!-- Code Inputs -->
+                        <div class="code-container">
+                            <input type="number" class="code" min="0" max="9" required />
+                            <input type="number" class="code" min="0" max="9" required />
+                            <input type="number" class="code" min="0" max="9" required />
+                            <input type="number" class="code" min="0" max="9" required />
+                            <input type="number" class="code" min="0" max="9" required />
+                            <input type="number" class="code" min="0" max="9" required />
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="main-btn transparent md mt-4 mb-3 mx-auto">إرسال</button>
+
+                        <!-- button-footer -->
+                        <button type="button" class="button-footer mx-auto">لم يصلك الكود؟</button>
+
+                    </form>
+
                 </div>
             </div>
 
@@ -207,12 +210,37 @@
 
 
 
+
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Jquery -->
     <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
     <!-- Select 2 -->
     <script src="./assets/plugins/select2/select2.js"></script>
+
+    <!-- Code Modal -->
+    <script>
+
+        $(document).ready(function(){
+        let codes = document.querySelectorAll(".code");
+
+        $(".code-container .code").first().focus();
+        codes.forEach((code, idx) => {
+            code.addEventListener("keydown", (e) => {
+            if (e.key >= 0 && e.key <= 9) {
+                codes[idx].value = "";
+                if([idx + 1] < codes.length){
+                    setTimeout(() => codes[idx + 1].focus(), 10);
+                }
+            } else if (e.key === "Backspace") {
+                setTimeout(() => codes[idx - 1].focus(), 10);
+            }
+            });
+        });
+
+        });
+    </script>
+
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
