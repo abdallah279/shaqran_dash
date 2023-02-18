@@ -166,7 +166,7 @@
     <div class="main-sec sec-padding main-padding-right">
         <div class="container">
 
-            <form action="product-detailes.html">
+            <form action="select-property.html">
 
                 <div class="card-style card-padding mb-4">
     
@@ -335,40 +335,27 @@
                                 <div class="main-input">
                                     <select name="" id="" class="select discount-type">
                                         <option value="" selected disabled>اختر نوع الخصم</option>
-                                        <option value="" title="percentage">نسبة</option>
-                                        <option value="" title="valun">قيمة</option>
+                                        <option value="" title="percentage">نسبة / قيمة</option>
+                                        <option value="" title="not-found">لا يوجد</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6 pre-value valun">
+                        <div class="col-md-6 percentage">
                             <div class="input-g">
                                 <label class="main-label">
-                                    قيمة الخصم
+                                    نسبة / قيمة الخصم
                                     <span class="label-hint">*</span>
                                 </label>
                                 <div class="main-input">
-                                    <input type="number" class="input-me" placeholder="ادخل قيمة الخصم">
-                                    <span class="main-icon blue">ر.س</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 pre-value percentage">
-                            <div class="input-g">
-                                <label class="main-label">
-                                    نسبة الخصم
-                                    <span class="label-hint">*</span>
-                                </label>
-                                <div class="main-input">
-                                    <input type="number" class="input-me" value="25" placeholder="ادخل نسبة الخصم">
+                                    <input type="number" class="input-me" placeholder="ادخل نسبة أو قيمة الخصم">
                                     <span class="main-icon blue">%</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6 pre-value percentage valun">
+                        <div class="col-md-6 percentage">
                             <div class="input-g">
                                 <label class="main-label">
                                     تاريخ إنتهاء الخصم
@@ -426,15 +413,16 @@
         });
     </script>
 
-    <script>
-        $('.pre-value').hide()
-        $('.valun').show()
-        $('.discount-type').on('select2:select', function (e) {
-            var data = e.params.data;
-            $('.pre-value').fadeOut(0)
-            $(`.${data.title}`).fadeIn()
-        });
-    </script>
+<script>
+    $('.discount-type').on('select2:select', function (e) {
+        var data = e.params.data;
+        if(data.title == 'percentage'){
+            $('.percentage').fadeIn();
+        } else{
+            $('.percentage').fadeOut();
+        }
+    });
+</script>
 
 
     <!-- Upload Img -->

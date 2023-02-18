@@ -1074,15 +1074,18 @@
         });
     </script>
 
-    <!-- Main Js -->
-    <script src="assets/js/main.js"></script>
-
     <!-- Select Multiple -->
     <script>
+        isRtlS = $('html[lang="ar"]').length > 0;
+
         $(".select-multi").select2({
-            dir: isRtl ? "rtl" : "ltr",
-            placeholder: "اختر الأقسام"
+            dir: isRtlS ? "rtl" : "ltr",
+            placeholder: "اختر الأقسام",
+            closeOnSelect: false,
         });
     </script>
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

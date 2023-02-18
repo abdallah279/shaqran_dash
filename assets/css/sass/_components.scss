@@ -821,8 +821,7 @@
 }
 
 // Buttons
-.up:hover,
-.up:focus {
+.up:hover{
   -webkit-box-shadow: inset 0 -4.25em 0 0 var(#fff);
   box-shadow: inset 0 -4.25em 0 0 #fff;
   color: $blue2 !important;
@@ -1621,6 +1620,13 @@
   }
 }
 
+.disabled{
+  background-color: $white2 !important;
+  color: $blue2 !important;
+  pointer-events: none;
+  border: none;
+}
+
 .card-dir{
   display: flex;
   justify-content: space-between;
@@ -2076,6 +2082,7 @@
       align-items: center;
       border-radius: 5px;
       // padding: 6px 0;
+      cursor: pointer;
       outline: none;
       font-size: 14px;
       color: $dark;

@@ -1002,8 +1002,7 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   right: unset !important;
 }
 
-.up:hover,
-.up:focus {
+.up:hover {
   box-shadow: inset 0 -4.25em 0 0 #fff;
   color: #1D71B8 !important;
   /* transform: translateY(-4px); */
@@ -1800,6 +1799,13 @@ html[lang=ar] .live-p {
   }
 }
 
+.disabled {
+  background-color: #F7FAFC !important;
+  color: #1D71B8 !important;
+  pointer-events: none;
+  border: none;
+}
+
 .card-dir {
   display: flex;
   justify-content: space-between;
@@ -2266,6 +2272,7 @@ html[lang=ar] .select-filter ~ .select2-container--filter-m .select2-selection--
   display: flex;
   align-items: center;
   border-radius: 5px;
+  cursor: pointer;
   outline: none;
   font-size: 14px;
   color: #161616;
@@ -6198,4 +6205,12 @@ html[lang=ar] .chat-form .chat-btn {
   background-color: #F7FAFC;
   border-color: #F7FAFC;
   cursor: auto;
+}
+
+.group-title {
+  text-align: center;
+  padding: 12px;
+  background-color: #1D71B8;
+  color: #fff;
+  font-size: 16px;
 }/*# sourceMappingURL=main.css.map */
