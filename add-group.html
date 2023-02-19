@@ -180,7 +180,7 @@
                                 </label>
                                 <div class="main-input">
                                     <select name="" id="" class="select select-value">
-                                        <option value="" selected hidden>اختر اللون</option>
+                                        <option value="" selected disabled>اختر اللون</option>
                                         <option value="0">أحمر</option>
                                         <option value="1">أبيض</option>
                                         <option value="2">اخضر</option>
@@ -197,7 +197,7 @@
                                 </label>
                                 <div class="main-input">
                                     <select name="" id="" class="select select-value">
-                                        <option value="" selected hidden>اختر المقاس</option>
+                                        <option value="" selected disabled>اختر المقاس</option>
                                         <option value="0">lg</option>
                                         <option value="1">xl</option>
                                         <option value="2">xxl</option>
@@ -220,14 +220,19 @@
                     </div>
                 </div>
 
-                <!-- <div class="group-container">
 
-                    <div class="group-title">أبيض , xl</div>
-        
+                <div class="all-groups"></div>
+
+
+
+                <div class="group-container mb-4">
+
+                    <div class="group-title">أبيض , lg</div>
+
                     <div class="card-style card-padding mb-2">
-        
+
                         <div class="row">
-    
+
                             <div class="col-md-6">
                                 <div class="input-g">
                                     <label class="main-label">
@@ -240,7 +245,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-6">
                                 <div class="input-g">
                                     <label class="main-label">
@@ -252,7 +257,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-6">
                                 <div class="input-g">
                                     <label class="main-label">
@@ -264,7 +269,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-6">
                                 <div class="input-g">
                                     <label class="main-label">
@@ -280,7 +285,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-6 percentage">
                                 <div class="input-g">
                                     <label class="main-label">
@@ -293,7 +298,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-6 percentage">
                                 <div class="input-g">
                                     <label class="main-label">
@@ -306,7 +311,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-6">
                                 <div class="input-g img-video">
                                     <label class="main-label">
@@ -314,7 +319,7 @@
                                         <span class="label-hint">*</span>
                                     </label>
                                     <div class="main-input">
-                                        <input type="file" name="" accept="image/*" id="idPhoto1" multiple class="hidden-input img-upload-input">
+                                        <input type="file" name="" accept="image/*" id="idPhoto1" multiple onChange='upload(this)' class="hidden-input img-upload-input">
                                         <label for="idPhoto1" class="input-me photo-input">
                                             ارفق الصور
                                         </label>
@@ -323,25 +328,140 @@
                                     <div class="photo-con"></div>
                                 </div>
                             </div>
-    
+
                         </div>
-        
+
                     </div>
-        
+
+                    <div class="cart-buttons-con bg-white py-3">
+                        <div class="container">
+                            <div class="buttons-m lg">
+                                <button type="button" class="main-btn blue md up confirm">تأكيد</button>
+                                <button type="button" class="main-btn transparent-red md delete">حذف</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="group-container mb-4">
+
+                    <div class="group-title">أحمر , lg</div>
+
+                    <div class="card-style card-padding mb-2">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="input-g">
+                                    <label class="main-label">
+                                        السعر قبل الخصم
+                                        <span class="label-hint">*</span>
+                                    </label>
+                                    <div class="main-input">
+                                        <input type="text" placeholder="أدخل السعر قبل الخصم " class="input-me">
+                                        <span class="main-icon blue">ر.س</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-g">
+                                    <label class="main-label">
+                                        العدد المتوفر
+                                        <span class="label-hint">*</span>
+                                    </label>
+                                    <div class="main-input">
+                                        <input type="number" placeholder="أدخل العدد المتوفر" class="input-me">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-g">
+                                    <label class="main-label">
+                                        sku (رقم المنتج)
+                                        <span class="label-hint">*</span>
+                                    </label>
+                                    <div class="main-input">
+                                        <input type="number" placeholder="أدخل sku" class="input-me">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-g">
+                                    <label class="main-label">
+                                        نوع الخصم
+                                        <span class="label-hint">*</span>
+                                    </label>
+                                    <div class="main-input">
+                                        <select name="" id="" class="select discount-type">
+                                            <option value="" selected disabled>اختر نوع الخصم</option>
+                                            <option value="" title="percentage">نسبة / قيمة</option>
+                                            <option value="" title="not-found">لا يوجد</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 percentage">
+                                <div class="input-g">
+                                    <label class="main-label">
+                                        نسبة / قيمة الخصم
+                                        <span class="label-hint">*</span>
+                                    </label>
+                                    <div class="main-input">
+                                        <input type="number" class="input-me" placeholder="ادخل نسبة أو قيمة الخصم">
+                                        <span class="main-icon blue">%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 percentage">
+                                <div class="input-g">
+                                    <label class="main-label">
+                                        تاريخ إنتهاء الخصم
+                                        <span class="label-hint">*</span>
+                                    </label>
+                                    <div class="main-input">
+                                        <input type="date" class="input-me date" placeholder="ادخل تاريخ إنتهاء الخصم">
+                                        <i class="fa-regular fa-calendar main-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-g img-video">
+                                    <label class="main-label">
+                                        الصور
+                                        <span class="label-hint">*</span>
+                                    </label>
+                                    <div class="main-input">
+                                        <input type="file" name="" accept="image/*" id="idPhoto2" multiple class="hidden-input img-upload-input">
+                                        <label for="idPhoto2" class="input-me photo-input">
+                                            ارفق الصور
+                                        </label>
+                                        <i class="fa-regular fa-file main-icon"></i>
+                                    </div>
+                                    <div class="photo-con"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cart-buttons-con bg-white py-3">
+                        <div class="container">
+                            <div class="buttons-m lg">
+                                <button type="button" class="main-btn blue md up confirm">تأكيد</button>
+                                <button type="button" class="main-btn transparent-red md delete">حذف</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div> -->
-
-                <!-- <div class="cart-buttons-con bg-white py-3">
-                     <div class="container">
-                         <div class="buttons-m lg">
-                             <button type="button" class="main-btn blue md up">تأكيد</button>
-                             <button type="button" class="main-btn transparent-red md">حذف</button>
-                         </div>
-                     </div>
-                </div> -->
-
-                <div class="all-groups"></div>
-
-
 
             </form>
 
@@ -370,6 +490,13 @@
     <script>
         let allValue = [];
         let id = 1;
+
+        // get The old Groups and Push It in Array
+        $('.group-title').each(function() {
+            let oldGroup = $(this).text().trim().split(' , ');
+            allValue.push(oldGroup);
+        });
+
         $('.add-group').on('click', function(){
 
             let currentValue = [];
@@ -506,7 +633,7 @@
                                             <span class="label-hint">*</span>
                                         </label>
                                         <div class="main-input">
-                                            <input type="file" name="" accept="image/*" id="idPhoto${id}" multiple class="hidden-input img-upload-input">
+                                            <input type="file" name="" accept="image/*" id="idPhoto${id}" multiple onChange='upload(this)' class="hidden-input img-upload-input">
                                             <label for="idPhoto${id}" class="input-me photo-input">
                                                 ارفق الصور
                                             </label>
@@ -532,10 +659,13 @@
                     </div>
                 `;
 
+                
                 $('.all-groups').prepend(myGroup);
                 $('.all-groups .group-container:first-child').hide();
 
                 $('.all-groups .group-container:first-child').fadeIn(800);
+
+                
 
                 $('.confirm').on('click', function(){
                     $(this).text('تعديل');
@@ -556,17 +686,20 @@
                     }
 
                     $(this).parents('.group-container').remove();
-                })
+
+                    if(allValue.length == 0){
+                        $('.add-group').removeClass('disabled');
+                    }
+
+                    if( $(this).parents('.group-container').find('.confirm').hasClass('confirm') ){
+                        $('.add-group').removeClass('disabled');
+                    }
+                });
                 
             }
 
-            // function deleteGroup(myVal){
-            //     console.log(myVal)
-            //     console.log('sssss')
-            // }
 
-
-            flatpickr(".date", {
+                flatpickr(".date", {
                     disableMobile: "true",
                     dateFormat: "Y-m-d"
                 });
@@ -589,97 +722,71 @@
                     }
                 });
 
-                // Upload Imgs
-                let loginInputs = document.querySelectorAll('.img-upload-input');
-
-                loginInputs.forEach((input) =>{
-                    if(input.classList.contains('profile')){
-                        let img = input.parentElement.querySelector('.profile-img .img');
-                        let imageSrc = img.getAttribute('src');
-                        input.onchange = function(){
-
-                            let reader = new FileReader();
-                            if(input.files[0]){
-                                reader.readAsDataURL(input.files[0]);
-                            } else{
-                                img.setAttribute('src', imageSrc);
-                                img.classList.remove('wid');
-                            }
-
-                            reader.onload = ()=>{
-
-                                img.setAttribute('src', reader.result);
-                                img.classList.add('wid');
-
-                            }
-                        }
-                    } else{
-                        $(".img-upload-input").change(function() {
-                            imgPreview(this);
-                        });
-
-                        function imgPreview(input) {
-                            var file = input.files[0];
-                            var mixedfile = file['type'].split("/");
-                            var filetype = mixedfile[0];
-
-                            let photoContainer = $(input).parent('.main-input').next('.photo-con');
-
-
-                            if(filetype == "image"){
-                                if(!(input.hasAttribute('multiple'))){
-                                    photoContainer.empty();
-                                }
-
-                                for(file of input.files){
-                                    let srcImg = URL.createObjectURL(file);
-
-                                    let img = `
-                                        <div class='hidden-img'>
-                                            <img src='${srcImg}' />
-                                            <a class="fancybox" data-fancybox-group="gallery"  href="${srcImg}"></a>
-                                            <input type='hidden' value='${file.name}' />
-                                            <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
-                                        </div>
-                                    `;
-
-                                    photoContainer.append(img);
-                                    $('.fancybox').fancybox({});
-                                    $('.remove-img').on('click', function(e){
-                                        e.target.closest('.hidden-img').remove();
-                                    });
-
-                                }
-
-                            } else if(filetype == "video"){
-
-                                photoContainer.empty();
-
-                                let srcVideo = URL.createObjectURL(input.files[0]);
-
-                                let video = `
-                                    <div class='hidden-img'>
-                                        <video style='width:100%; height:100%; object-fit:cover;border-radius:5px' loop autoplay src='${srcVideo}'></video>
-                                        <a class="fancybox" data-fancybox-group="gallery" data-type='video' href="${srcVideo}"></a>
-                                        <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
-                                    </div>
-                                `
-
-                                photoContainer.append(video);
-                                $('.fancybox').fancybox({});
-                                $('.remove-img').on('click', function(e){
-                                    e.target.closest('.hidden-img').remove();
-                                });
-
-                            }else{
-                                alert("Invalid file type");
-                            }
-                        }
-                    }
-                });
-
         })
     </script>
+
+
+    <!-- FlatPicker -->
+    <script>
+        flatpickr(".date", {
+            disableMobile: "true",
+            dateFormat: "Y-m-d"
+        });
+    </script>
+
+    <!-- Select 2 -->
+    <script>
+        let isRtlS2 = $('html[lang="ar"]').length > 0;
+        $(".select").select2({
+            dir: isRtlS2 ? "rtl" : "ltr",
+            minimumResultsForSearch: Infinity,
+        });
+    </script>
+
+    <!--  Show / Hide Inputs -->
+    <script>
+        $('.percentage').hide();
+        $('.discount-type').on('select2:select', function (e) {
+            var data = e.params.data;
+            if(data.title == 'percentage'){
+                $('.percentage').fadeIn();
+            } else{
+                $('.percentage').fadeOut();
+            }
+        });
+    </script>
+
+
+    <!-- Upload Multiple Images -->
+    <script>
+        function upload(input) {
+            let photoContainer = $(input).parent('.main-input').next('.photo-con');
+
+            for(file of input.files){
+
+                let reader = new FileReader();
+                let img;
+                reader.onload = ()=>{
+                    img = `
+                        <div class='hidden-img'>
+                            <img src='${reader.result}' />
+                            <a class="fancybox" data-fancybox-group="gallery"  href="${reader.result}"></a>
+                            <input type='hidden' value='${file.name}' />
+                            <span class='remove-img'><i class="fa-solid fa-xmark"></i></span>
+                        </div>
+                    `;
+                    photoContainer.append(img);
+                    $('.fancybox').fancybox({});
+                    $('.remove-img').on('click', function(e){
+                        e.target.closest('.hidden-img').remove();
+                    });
+                }
+                reader.readAsDataURL(file);
+
+            }
+        }
+    </script>
+
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
