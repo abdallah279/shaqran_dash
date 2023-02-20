@@ -956,7 +956,7 @@
 
     &.lg{
       width: 160px;
-      padding: 25px;
+      padding: 0 25px;
       font-size: 16px;
       height: 50px;
       border-radius: 8px;
@@ -986,10 +986,15 @@
       border-radius: 8px;
 
       @media screen and (max-width:$screen-sm) {
-        width: 200px;
+        width: fit-content;
         height: 48px;
         font-size: 16px;
         border-radius: 8px;
+        padding: 0 25px;
+      }
+
+      @media screen and (max-width:$screen-sm) {
+        font-size: 15px;
       }
     }
 
@@ -1132,6 +1137,10 @@
 
   &.lg{
     gap: 10px 23px;
+
+    @media screen and (max-width:$screen-sm) {
+      gap: 10px;
+    }
   }
 
   .main-btn{
@@ -1175,6 +1184,16 @@
 .px-6{
   padding-right: 130px;
   padding-left: 130px;
+  
+  @media screen and (max-width:$screen-lg2) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  
+  @media screen and (max-width:$screen-lg) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .mazad-value{
@@ -1375,8 +1394,14 @@
   }
 
 
+  
+  @media screen and (max-width:$screen-lg) {
+    padding: 15px 20px;
+    height: auto;
+  }
+  
   @media screen and (max-width:$screen-sm) {
-    padding: 0 12px;
+    padding: 15px 12px;
     min-height: 58px;
   }
 
@@ -1410,6 +1435,23 @@
   &.sm{
     font-size: 12px;
     line-height: 1.4;
+  }
+}
+
+.chart-padding{
+  padding: 20px 30px;
+
+  @media screen and (max-width:$screen-sm) {
+    padding: 20px 15px;
+  }
+}
+
+.open-side{
+  cursor: pointer;
+  display: none;
+
+  @media screen and (max-width:$screen-lg) {
+    display: block;
   }
 }
 
@@ -1784,11 +1826,6 @@
     }
 
     @media screen and (max-width:$screen-sm) {
-      font-size: 15px;
-    }
-
-    @media screen and (max-width:$screen-xs) {
-      font-family: fontMed;
       font-size: 15px;
     }
   }

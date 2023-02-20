@@ -9,9 +9,18 @@
     background-color: $white;
     z-index: 4;
     transition: $main-transition;
+
+    @media screen and (max-width:$screen-md) {
+        padding: 10px 0;
+    }
+
+    @media screen and (max-width:$screen-xs) {
+        padding: 25px 0;
+    }
     
     .navbar-content{
         @include between;
+        width: 100%;
         
         .title{
             font-size: 18px;
@@ -20,6 +29,11 @@
 
             @media screen and (max-width:$screen-sm) {
                 font-size: 16px;
+                order: 2;
+            }
+
+            @media screen and (max-width:$screen-xs) {
+                font-size: 15px;
             }
         }
 
@@ -28,9 +42,18 @@
             height: 65px;
             margin: auto;
             
+            @media screen and (max-width:$screen-lg) {
+                width: 105px;
+                height: 50px;
+            }
+            
             @media screen and (max-width:$screen-sm) {
-                width: 90px;
-                height: 40px;
+                order: 1;
+                margin: unset;
+            }
+            
+            @media screen and (max-width:$screen-xs) {
+                display: none;
             }
             
         }
@@ -39,6 +62,11 @@
             display: flex;
             align-items: center;
             gap: 5px;
+
+            @media screen and (max-width:$screen-sm) {
+                // display: none;
+                order: 3;
+            }
         }
 
         .not-link{

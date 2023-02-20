@@ -17,6 +17,16 @@ $(".dropdown-menu").click(function(e){
 });
 
 
+$('.open-side').on('click', function(){
+  $('.sidebar-m').addClass('active');
+  $('.overlay-m').fadeIn(700);
+});
+
+$('.overlay-m').on('click', function(){
+  $(this).fadeOut(700);
+  $('.sidebar-m').removeClass('active');
+})
+
 let isRtl = $('html[lang="ar"]').length > 0;
 
 // Normal Select To

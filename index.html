@@ -27,34 +27,37 @@
 
     <!-- Start Navbar -->
     <nav class="navbar-m main-padding-right">
-        <div class="container">
-            <div class="navbar-content">
-                
-                <h1 class="title">الرئيسية</h1>
-
-                <img src="assets/imgs/logo.png" alt="logo" class="logo">
-
-                <div class="left-sec">
-
-                    <!-- notifications -->
-                    <a href="notifications.html">
-                        <img src="assets/imgs/icons/not-n.png" class="not-link" alt="not">
-                    </a>
-                    <!-- Lang -->
-                    <div class="dropdown">
-                        <button type="button" class="head-lang dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="lang">AR</span>
-                            <i class="fa-solid fa-angle-down"></i>
-                        </button>
+        <div class="container ">
+            <div class="d-flex gap-2 align-items-center">
+                <i class="fa-solid fa-bars-staggered open-side"></i>
+                <div class="navbar-content flex-1">
+                    
+                    <h1 class="title">الرئيسية</h1>
     
-                        <!-- DropDown -->
-                        <ul class="dropdown-menu drop-lang">
-                            <a href="#" class="lang-item">AR</a>
-                            <a href="#" class="lang-item">En</a>
-                        </ul>
+                    <img src="assets/imgs/logo.png" alt="logo" class="logo">
+    
+                    <div class="left-sec">
+    
+                        <!-- notifications -->
+                        <a href="notifications.html">
+                            <img src="assets/imgs/icons/not-n.png" class="not-link" alt="not">
+                        </a>
+                        <!-- Lang -->
+                        <div class="dropdown">
+                            <button type="button" class="head-lang dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="lang">AR</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+        
+                            <!-- DropDown -->
+                            <ul class="dropdown-menu drop-lang">
+                                <a href="#" class="lang-item">AR</a>
+                                <a href="#" class="lang-item">En</a>
+                            </ul>
+                        </div>
                     </div>
+    
                 </div>
-
             </div>
         </div>
     </nav>
@@ -69,7 +72,7 @@
             <img src="assets/imgs/stor1.png" alt="store img" class="store-img">
     
             <div class="store-info">
-                <span class="name">off white</span>
+                <span class="name">off white </span>
                 <div class="star-text">
                     <i class="fa-solid fa-star"></i>
                     <span>4.5</span>
@@ -264,7 +267,7 @@
 
             </div>
 
-            <div class="row mb-4">
+            <div class="row mb-4 gy-4">
     
                 <div class="col-xl-7">
                     <div class="card-style height-full">
@@ -324,8 +327,52 @@
                 </div>
     
                 <div class="col-xl-5">
-                    <div class="card-style height-full">
-                        <div id="chart" class="mb-3" style="width:350px; height:350px;margin:auto"></div>
+                    <div class="card-style card-padding chart-padding height-full">
+                        <div id="chart"></div>
+
+                        <div class="all-circles mt-4">
+    
+                            <div class="chart-circle" data-color="#2ac43f">
+                                <div class="circle">
+                                    <span class="number">40%</span>
+                                </div>
+                                <span class="line"></span>
+                                <span class="dot"></span>
+                                <div class="text">طلبات جديدة</div>
+                                <div class="line-bottom"></div>
+                            </div>
+                            
+                            <div class="chart-circle" data-color="#ffc107">
+                                <div class="circle">
+                                    <span class="number">20%</span>
+                                </div>
+                                <span class="line"></span>
+                                <span class="dot"></span>
+                                <div class="text">طلبات حالية</div>
+                                <div class="line-bottom"></div>
+                            </div>
+                            
+                            <div class="chart-circle" data-color="#2f4291">
+                                <div class="circle">
+                                    <span class="number">20%</span>
+                                </div>
+                                <span class="line"></span>
+                                <span class="dot"></span>
+                                <div class="text">طلبات منتهية</div>
+                                <div class="line-bottom"></div>
+                            </div>
+                            
+                            <div class="chart-circle" data-color="#eb2222">
+                                <div class="circle">
+                                    <span class="number">20%</span>
+                                </div>
+                                <span class="line"></span>
+                                <span class="dot"></span>
+                                <div class="text">طلبات ارجاع</div>
+                                <div class="line-bottom"></div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
     
@@ -356,7 +403,7 @@
                 <div class="modal-body">
 
                     <div class="modal-head">القسم الرئيسي</div>
-                    <div class="radio-boxs row w-100 mb-4">
+                    <div class="radio-boxs row w-100 mb-4 gy-3">
     
                         <div class="col-md-3 col-sm-4 col-6">
                             <div class="radio-box">
@@ -397,7 +444,7 @@
                     </div>
 
                     <div class="modal-head">القسم الفرعي</div>
-                    <div class="row w-100">
+                    <div class="row w-100 gy-3">
 
                         <div class="col-md-3 col-sm-4 col-6">
                             <div class="check-box">
@@ -471,28 +518,45 @@
     <!-- Chart -->
     <script>
         var options = {
-            series: [44, 55, 41, 17, 15],
+            series: [40, 20, 20, 20],
+            colors: ['#2ac43f', '#ffc107', '#2f4291' , '#eb2222'],
+            dataLabels: {
+                enabled: true,
+                formatter: function (val, opts) {
+                    return  `${parseInt(val)}%`
+                },
+                style: {
+                    fontSize: '11px',
+                    fontFamily: 'fontMed',
+                    fontWeight: '500',
+                },
+            },
             chart: {
                 type: 'donut',
+                height: 200,
             },
             legend: {
                 show: false,
             },
-            responsive: [{
-            breakpoint: 350,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                position: 'bottom'
-                }
-            }
-            }]
+            stroke:{
+                show: false,
+            },
         };
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
+    </script>
+
+    <script>
+        $('.chart-circle').each(function(){
+
+            let color = $(this).data('color');
+
+            $(this).find('.circle').css('background-color', color);
+            $(this).find('.line').css('background-color', color);
+            $(this).find('.dot').css('background-color', color);
+            $(this).find('.line-bottom').css('background-color', color);
+        })
     </script>
 
     <!-- Main Js -->

@@ -31,8 +31,10 @@
 
     <!-- Start Navbar -->
     <nav class="navbar-m main-padding-right">
-        <div class="container">
-            <div class="navbar-content">
+        <div class="container ">
+            <div class="d-flex gap-2 align-items-center">
+                <i class="fa-solid fa-bars-staggered open-side"></i>
+                <div class="navbar-content flex-1">
                 
                 <h1 class="title">المنتجات , تعديل سمات منتج</h1>
 
@@ -337,131 +339,12 @@
                         <div class="container">
                             <div class="buttons-m lg">
                                 <button type="button" class="main-btn blue md up confirm">تأكيد</button>
-                                <button type="button" class="main-btn transparent-red md delete">حذف</button>
+                                <button type="button" class="main-btn transparent-red md delete" onClick='deleteGroup(this)'>حذف</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
-
-                <!-- <div class="group-container mb-4">
-
-                    <div class="group-title">أحمر , lg</div>
-
-                    <div class="card-style card-padding mb-2">
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="input-g">
-                                    <label class="main-label">
-                                        السعر قبل الخصم
-                                        <span class="label-hint">*</span>
-                                    </label>
-                                    <div class="main-input">
-                                        <input type="text" placeholder="أدخل السعر قبل الخصم " class="input-me">
-                                        <span class="main-icon blue">ر.س</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="input-g">
-                                    <label class="main-label">
-                                        العدد المتوفر
-                                        <span class="label-hint">*</span>
-                                    </label>
-                                    <div class="main-input">
-                                        <input type="number" placeholder="أدخل العدد المتوفر" class="input-me">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="input-g">
-                                    <label class="main-label">
-                                        sku (رقم المنتج)
-                                        <span class="label-hint">*</span>
-                                    </label>
-                                    <div class="main-input">
-                                        <input type="number" placeholder="أدخل sku" class="input-me">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="input-g">
-                                    <label class="main-label">
-                                        نوع الخصم
-                                        <span class="label-hint">*</span>
-                                    </label>
-                                    <div class="main-input">
-                                        <select name="" id="" class="select discount-type">
-                                            <option value="" selected disabled>اختر نوع الخصم</option>
-                                            <option value="" title="percentage">نسبة / قيمة</option>
-                                            <option value="" title="not-found">لا يوجد</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 percentage">
-                                <div class="input-g">
-                                    <label class="main-label">
-                                        نسبة / قيمة الخصم
-                                        <span class="label-hint">*</span>
-                                    </label>
-                                    <div class="main-input">
-                                        <input type="number" class="input-me" placeholder="ادخل نسبة أو قيمة الخصم">
-                                        <span class="main-icon blue">%</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 percentage">
-                                <div class="input-g">
-                                    <label class="main-label">
-                                        تاريخ إنتهاء الخصم
-                                        <span class="label-hint">*</span>
-                                    </label>
-                                    <div class="main-input">
-                                        <input type="date" class="input-me date" placeholder="ادخل تاريخ إنتهاء الخصم">
-                                        <i class="fa-regular fa-calendar main-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="input-g img-video">
-                                    <label class="main-label">
-                                        الصور
-                                        <span class="label-hint">*</span>
-                                    </label>
-                                    <div class="main-input">
-                                        <input type="file" name="" accept="image/*" id="idPhoto2" multiple class="hidden-input img-upload-input">
-                                        <label for="idPhoto2" class="input-me photo-input">
-                                            ارفق الصور
-                                        </label>
-                                        <i class="fa-regular fa-file main-icon"></i>
-                                    </div>
-                                    <div class="photo-con"></div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="cart-buttons-con bg-white py-3">
-                        <div class="container">
-                            <div class="buttons-m lg">
-                                <button type="button" class="main-btn blue md up confirm">تأكيد</button>
-                                <button type="button" class="main-btn transparent-red md delete">حذف</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div> -->
 
             </form>
 
@@ -651,7 +534,7 @@
                             <div class="container">
                                 <div class="buttons-m lg">
                                     <button type="button" class="main-btn blue md up confirm">تأكيد</button>
-                                    <button type="button" class="main-btn transparent-red md delete">حذف</button>
+                                    <button type="button" class="main-btn transparent-red md delete" onClick='deleteGroup(this)'>حذف</button>
                                 </div>
                             </div>
                         </div>
@@ -672,57 +555,56 @@
                     $(this).removeClass('confirm');
                     $('.add-group').removeClass('disabled')
                 });
-
-                $('.delete').on('click', function(){
-
-                    let groupTitle = $(this).parents('.group-container').find('.group-title').text();
-
-                    let groupTitleJoin = groupTitle.split(' , ');
-    
-                    for(let i =0; i < allValue.length; i++){
-                        if(allValue[i].toString() == groupTitleJoin.toString()){
-                            allValue.splice(i, 1);
-                        }
-                    }
-
-                    $(this).parents('.group-container').remove();
-
-                    if(allValue.length == 0){
-                        $('.add-group').removeClass('disabled');
-                    }
-
-                    if( $(this).parents('.group-container').find('.confirm').hasClass('confirm') ){
-                        $('.add-group').removeClass('disabled');
-                    }
-                });
-                
             }
 
+            flatpickr(".date", {
+                disableMobile: "true",
+                dateFormat: "Y-m-d"
+            });
 
-                flatpickr(".date", {
-                    disableMobile: "true",
-                    dateFormat: "Y-m-d"
-                });
+            // Select 2
+            let isRtlS = $('html[lang="ar"]').length > 0;
+            $(".select").select2({
+                dir: isRtlS ? "rtl" : "ltr",
+                minimumResultsForSearch: Infinity,
+            });
 
-                // Select 2
-                let isRtlS = $('html[lang="ar"]').length > 0;
-                $(".select").select2({
-                    dir: isRtlS ? "rtl" : "ltr",
-                    minimumResultsForSearch: Infinity,
-                });
-
-                // Show / Hide Inputs
-                $('.percentage').hide();
-                $('.discount-type').on('select2:select', function (e) {
-                    var data = e.params.data;
-                    if(data.title == 'percentage'){
-                        $('.percentage').fadeIn();
-                    } else{
-                        $('.percentage').fadeOut();
-                    }
-                });
+            // Show / Hide Inputs
+            $('.percentage').hide();
+            $('.discount-type').on('select2:select', function (e) {
+                var data = e.params.data;
+                if(data.title == 'percentage'){
+                    $('.percentage').fadeIn();
+                } else{
+                    $('.percentage').fadeOut();
+                }
+            });
 
         })
+    
+        // Delete Button
+        function deleteGroup(btn){
+
+            let groupTitle = $(btn).parents('.group-container').find('.group-title').text();
+
+            let groupTitleJoin = groupTitle.split(' , ');
+
+            for(let i =0; i < allValue.length; i++){
+                if(allValue[i].toString() == groupTitleJoin.toString()){
+                    allValue.splice(i, 1);
+                }
+            }
+
+            $(btn).parents('.group-container').remove();
+
+            if(allValue.length == 0){
+                $('.add-group').removeClass('disabled');
+            }
+
+            if( $(btn).parents('.group-container').find('.confirm').hasClass('confirm') ){
+                $('.add-group').removeClass('disabled');
+            }
+        };
     </script>
 
 
@@ -786,7 +668,6 @@
             }
         }
     </script>
-
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
